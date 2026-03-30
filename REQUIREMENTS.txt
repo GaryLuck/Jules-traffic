@@ -1,0 +1,29 @@
+From:
+Kai Nagel, Michael Schreckenberg. A cellular automaton model for freeway traffic. Journal de Physique I,
+1992, 2 (12), pp.2221-2229. ⟨10.1051/jp1:1992277⟩. ⟨jpa-00246697⟩
+
+Our computational model is defined on a one-dimensional array of L sites and with open or periodic boundary conditions. 
+Each site may either be occupied by one vehicle, or it may
+be empty. Each vehicle has an integer velocity with values between zero and vmax. For an
+arbitrary configuration, one update of the system consists of the following four consecutive
+steps, which are performed in parallel for all vehicles:
+I. Acceleration: if the velocity v of a vehicle is lower than vmax and if the distance to the
+next car ahead is larger than v + 1, the speed is advanced by one,  let v = v + 1
+2. Slowing down (due to other cars): if a vehicle at site I sees the next vehicle at site I + j (with j < v), it reduces its speed to, let v = j - 1
+3. Randomization: with probability p (0.10 out of 1.0), the velocity of each vehicle (if greater than zero) is decreased by one, let v = v - 1
+4.  Car motion: each vehicle is advanced v sites.
+
+Length of highway L = 1000
+Random placement of cars, with a traffic jam between cells 400 and 800 (400 cars in adjacent cells)
+vmax = 100
+total number of cars on initial board = 600 (400 in the jam, 100 to left, and 100 to right)
+cars arrive from the left, and depart to the right
+cars randomly arrive from the left at a rate specified by the user using a slider control
+there should be a control to reset and restart the simulation
+
+The program should be written in a single HTML file, containing HTML, CSS, JavaScript, and graphics.
+
+
+
+
+
